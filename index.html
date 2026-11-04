@@ -16,7 +16,13 @@
 
   <header class="site-header">
     <a class="logo" href="#">Melody<span>♪</span></a>
-    <a class="btn btn-small" href="#commander">Créer ma chanson</a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Suivre ma commande</a>
+      <a class="btn btn-small" href="#commander">Créer ma chanson</a>
+    </nav>
   </header>
 
   <main>
@@ -24,7 +30,7 @@
     <section class="hero">
       <p class="hero-quote">« Elle a pleuré dès la première note. »</p>
       <h1>Offrez à ceux que vous aimez une chanson unique qu'ils n'oublieront jamais.</h1>
-      <p class="badge">🇫🇷 Chansons personnalisées, composées sur mesure</p>
+      <p class="badge"><span class="badge-tag">🇫🇷</span> Votre chanson est créée dans notre studio en <strong>Isère</strong>, France</p>
       <div class="hero-actions">
         <a class="btn btn-ghost" href="#exemple">▶ Écouter un exemple</a>
         <a class="btn btn-primary" href="#commander">Créez votre chanson maintenant</a>
@@ -90,7 +96,7 @@
     </section>
 
     <!-- TESTIMONIALS (placeholders: replace with real customer reviews) -->
-    <section class="testimonials">
+    <section class="testimonials" id="avis">
       <h2>Ils ont offert une chanson</h2>
       <div class="testi-grid">
         <blockquote>
@@ -248,7 +254,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <p>© <span id="year"></span> Melody. Tous droits réservés.</p>
     <nav><a href="#">CGV</a> · <a href="#">Mentions légales</a> · <a href="#">Contact</a></nav>
   </footer>

@@ -31,6 +31,9 @@ section { padding: 4rem 1.25rem; max-width: 1040px; margin: 0 auto; text-align: 
   display: flex; justify-content: space-between; align-items: center;
   max-width: 1040px; margin: 0 auto; padding: 1rem 1.25rem;
 }
+.main-nav { display: flex; align-items: center; gap: 1.5rem; }
+.main-nav a:not(.btn) { color: var(--ink); text-decoration: none; font-weight: 500; }
+.main-nav a:not(.btn):hover { color: var(--accent); }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--ink); text-decoration: none; }
 .logo span { color: var(--accent); margin-left: .15rem; }
 
@@ -50,7 +53,13 @@ section { padding: 4rem 1.25rem; max-width: 1040px; margin: 0 auto; text-align: 
 .hero { padding-top: 3rem; }
 .hero-quote { font-style: italic; color: var(--accent); font-size: 1.15rem; margin: 0 0 1rem; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.15; margin: 0 auto 1.25rem; max-width: 780px; }
-.badge { display: inline-block; background: #fdebd9; padding: .35rem .9rem; border-radius: 999px; font-size: .9rem; margin: 0 0 1.75rem; }
+.badge {
+  display: inline-flex; align-items: center; gap: .6rem; background: #fff;
+  border: 1px solid var(--line); box-shadow: 0 4px 14px rgba(194, 65, 12, .1);
+  padding: .5rem 1.1rem; border-radius: 999px; font-size: 1rem; margin: 0 0 1.75rem;
+}
+.badge strong { color: var(--accent); }
+.badge-tag { background: var(--accent); color: #fff; padding: .15rem .6rem; border-radius: 999px; font-weight: 700; }
 .hero-actions { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
 .hero-actions .btn { min-width: 280px; }
 .guarantees { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; color: var(--muted); font-size: .95rem; }
@@ -128,6 +137,10 @@ cite { color: var(--muted); font-size: .9rem; }
 /* Footer */
 .site-footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: .9rem; }
 .site-footer a { color: var(--muted); }
+
+@media (max-width: 760px) {
+  .main-nav a:not(.btn) { display: none; }
+}
 
 @media (max-width: 520px) {
   section { padding: 3rem 1rem; }
