@@ -78,6 +78,34 @@ section { padding: 4rem 1.25rem; max-width: 1040px; margin: 0 auto; text-align: 
 }
 .step p { margin: 0; color: var(--muted); }
 
+/* Occasions */
+.occasions-wrap { background: #2a1712; }
+.occasions h2 { color: #fff7ee; }
+.occasions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+.occasion {
+  position: relative; display: flex; align-items: flex-end; aspect-ratio: 4 / 3;
+  border-radius: 12px; overflow: hidden; text-decoration: none; color: #fff;
+  background-size: cover; background-position: center;
+  transition: transform .2s;
+}
+.occasion:hover { transform: translateY(-3px); }
+.occasion::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65), transparent 55%); }
+.occasion span { position: relative; z-index: 1; padding: .8rem 1rem; font-weight: 600; text-align: left; }
+/* Each card shows its photo if present in assets/occasions/, otherwise the gradient. */
+.o-partenaire   { background-image: url("../assets/occasions/partenaire.jpg"),   linear-gradient(135deg, #b4532a, #e8a87c); }
+.o-parents      { background-image: url("../assets/occasions/parents.jpg"),      linear-gradient(135deg, #7a5c4a, #d8b99b); }
+.o-enfants      { background-image: url("../assets/occasions/enfants.jpg"),      linear-gradient(135deg, #5f7a61, #c8d9a8); }
+.o-mariage      { background-image: url("../assets/occasions/mariage.jpg"),      linear-gradient(135deg, #8a6a52, #f0dcc2); }
+.o-anniversaire { background-image: url("../assets/occasions/anniversaire.jpg"), linear-gradient(135deg, #8c3b2a, #e0a04a); }
+.o-disparu      { background-image: url("../assets/occasions/disparu.jpg"),      linear-gradient(135deg, #3e5560, #a9bcc4); }
+
+@media (max-width: 760px) {
+  .occasions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .occasions-grid { grid-template-columns: 1fr; }
+}
+
 /* Compare */
 .compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
 .compare-card { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1rem; }
