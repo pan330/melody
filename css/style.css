@@ -99,6 +99,10 @@ cite { color: var(--muted); font-size: .9rem; }
 .time { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .9rem; }
 .player-note { color: var(--muted); font-size: .85rem; margin: .75rem 0 0; }
 
+.lyrics { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .75rem; }
+.lyrics summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+.lyrics p { margin: .9rem 0 0; color: var(--muted); font-size: .95rem; }
+
 .features { list-style: none; padding: 0; margin: 0 0 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
 .features li { display: flex; flex-direction: column; }
 .features span { color: var(--muted); font-size: .9rem; }
